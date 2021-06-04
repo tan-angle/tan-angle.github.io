@@ -30,45 +30,9 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            Hassan's blog
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-weibo-line"></i>
-                </a>
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-zhihu-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-qq-line"></i>
-                </a>
-              
+          <div class="toc-container hidden lg:block">
             
           </div>
         </div>
@@ -109,92 +73,134 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="text-lg text-gray-700 mb-8">
-          <i class="ri-archive-line"></i> 文章归档
-        </h2>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">C语言：计算小明同志100以内的加减法运算，并验证其答案的正确性</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-06-04 / 2 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://tan-angle.github.io/post-images/c-yu-yan-ji-suan-xiao-ming-tong-zhi-100-yi-nei-de-jia-jian-fa-yun-suan-bing-yan-zheng-qi-da-an-de-zheng-que-xing.webp" alt="">
+        
+        <div class="post-content yue">
+          <p><strong>题目：小明终于学习了100以内的加减法，但是他不知道他计算的得数是否正确，然而他妈妈没有时间帮他检查，于是乎他找到了你，希望你能帮帮他。</strong><br>
+<strong>输入</strong><br>
+一个100以内加减法的数学表达式<br>
+<strong>输出</strong><br>
+如果小明算的正确，输出YES，如果小明算错了，那么第一行输出NO，第二行输出正确结果的表达式<br>
+<strong>样例输入 Copy</strong><br>
+1+2=4<br>
+<strong>样例输出 Copy</strong><br>
+NO<br>
+1+2=3<br>
+<mark>代码实现如下：</mark></p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main()
+{
+    int a, c, e;
+    char b, d;
+    scanf(&quot;%d%c%d%c%d&quot;, &amp;a, &amp;b, &amp;c, &amp;d, &amp;e);
+    switch (b)
+    {
+    case '+':
+        if (a + c == e)
+        {
+            printf(&quot;YES&quot;);
+        }
+        else
+        {
+            printf(&quot;NO\n&quot;);
+            printf(&quot;%d+%d=%d&quot;, a, c, a + c);
+        }
+        break;
+    case '-':
+        if (a - c == e)
+        {
+            printf(&quot;YES&quot;);
+        }
+        else
+        {
+            printf(&quot;NO\n&quot;);
+            printf(&quot;%d-%d=%d&quot;, a, c, a - c);
+        }
+        break;
+    default:
+        printf(&quot;您输入的格式有误，请重新输入！&quot;);
+        break;
+    }
+    return 0;
+}
+</code></pre>
+<p><mark>运行结果如下：</mark></p>
+<ol>
+<li>
+<p>计算加法正确与错误的情况<br>
+<img src="https://img-blog.csdnimg.cn/20210515194727882.png" alt="在这里插入图片描述" loading="lazy"><br>
+<img src="https://img-blog.csdnimg.cn/2021051519480360.png" alt="在这里插入图片描述" loading="lazy"></p>
+</li>
+<li>
+<p>计算减法正确与错误的情况<br>
+<img src="https://img-blog.csdnimg.cn/20210515194837103.png" alt="在这里插入图片描述" loading="lazy"><br>
+<img src="https://img-blog.csdnimg.cn/20210515194928776.png" alt="在这里插入图片描述" loading="lazy"></p>
+</li>
+</ol>
+
+        </div>
+
         
 
-        <div class="archives-container">
+
+        <div class="flex justify-between py-8">
           
-            <h2 class="text-gray-600 py-4 animated fadeIn">
-              <i class="ri-map-pin-time-line"></i>
-              2021
-            </h2>
-            
-              
-                <a href="https://tan-angle.github.io/post/c-yu-yan-ab-de-ji-chong-shi-xian-fang-shi/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    C语言：A+B的几种实现方式
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/c-yu-yan-ji-suan-xiao-ming-tong-zhi-100-yi-nei-de-jia-jian-fa-yun-suan-bing-yan-zheng-qi-da-an-de-zheng-que-xing/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    C语言：计算小明同志100以内的加减法运算，并验证其答案的正确性
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/javamo-ni-yi-ge-jian-dan-de-yin-xing-atm-ji-gong-neng/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Java：模拟一个简单的银行ATM机功能
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    如何在Deepin操作系统V20版本中添加右键刷新按钮
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    浅谈一下如何在Windows平台下使用VS Code编写、运行和调试C/C++程序
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/ru-he-zai-linuxyi-ddeepin-cao-zuo-xi-tong-wei-li-ping-tai-xia-shi-yong-visual-stdio-code-yun-xing-cccheng-xu/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                     如何在Linux（以Ddeepin操作系统为例）平台下使用visual stdio code运行C/C++程序
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
-              
-                <a href="https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/" class="post">
-                  <h2 class="inline-block font-bold text-lg post-title animated fadeIn">
-                    Sublime Text安装与汉化教程
-                  </h2>
-                </a>
-                <div class="text-sm font-light mt-3 mb-6 text-gray-400 animated fadeInDown" style="animation-delay: 0.4s">2021-06-04</div>
-              
-            
+            <div class="prev-post">
+              <a href="https://tan-angle.github.io/post/c-yu-yan-ab-de-ji-chong-shi-xian-fang-shi/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  C语言：A+B的几种实现方式
+                </h3>
+              </a>
+            </div>
+          
+
+          
+            <div class="next-post">
+              <a href="https://tan-angle.github.io/post/javamo-ni-yi-ge-jian-dan-de-yin-xing-atm-ji-gong-neng/">
+                <h3 class="post-title">
+                  Java：模拟一个简单的银行ATM机功能
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
 
-        <div>
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-        </div>
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c499977fc3799c1f2ac6',
+    clientSecret: '552d00692e88353b372b653addb269aefc59aa2c',
+    repo: 'tan-angle.github.io',
+    owner: 'tan-angle',
+    admin: ['tan-angle'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 

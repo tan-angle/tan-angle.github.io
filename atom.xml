@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tan-angle.github.io</id>
     <title>Hassan&apos;s blog</title>
-    <updated>2021-06-04T11:48:13.161Z</updated>
+    <updated>2021-06-04T11:51:51.149Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tan-angle.github.io"/>
     <link rel="self" href="https://tan-angle.github.io/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>https://tan-angle.github.io/images/avatar.png</logo>
     <icon>https://tan-angle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Hassan&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[C语言：A+B的几种实现方式]]></title>
+        <id>https://tan-angle.github.io/post/c-yu-yan-ab-de-ji-chong-shi-xian-fang-shi/</id>
+        <link href="https://tan-angle.github.io/post/c-yu-yan-ab-de-ji-chong-shi-xian-fang-shi/">
+        </link>
+        <updated>2021-06-04T11:50:02.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[C语言：计算小明同志100以内的加减法运算，并验证其答案的正确性]]></title>
+        <id>https://tan-angle.github.io/post/c-yu-yan-ji-suan-xiao-ming-tong-zhi-100-yi-nei-de-jia-jian-fa-yun-suan-bing-yan-zheng-qi-da-an-de-zheng-que-xing/</id>
+        <link href="https://tan-angle.github.io/post/c-yu-yan-ji-suan-xiao-ming-tong-zhi-100-yi-nei-de-jia-jian-fa-yun-suan-bing-yan-zheng-qi-da-an-de-zheng-que-xing/">
+        </link>
+        <updated>2021-06-04T11:48:17.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java：模拟一个简单的银行ATM机功能]]></title>
         <id>https://tan-angle.github.io/post/javamo-ni-yi-ge-jian-dan-de-yin-xing-atm-ji-gong-neng/</id>
