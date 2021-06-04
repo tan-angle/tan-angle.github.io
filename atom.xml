@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tan-angle.github.io</id>
     <title>Hassan&apos;s blog</title>
-    <updated>2021-06-04T11:41:09.059Z</updated>
+    <updated>2021-06-04T11:44:25.360Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tan-angle.github.io"/>
     <link rel="self" href="https://tan-angle.github.io/atom.xml"/>
@@ -10,6 +10,13 @@
     <logo>https://tan-angle.github.io/images/avatar.png</logo>
     <icon>https://tan-angle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Hassan&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[如何在Deepin操作系统V20版本中添加右键刷新按钮]]></title>
+        <id>https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/</id>
+        <link href="https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/">
+        </link>
+        <updated>2021-06-04T11:43:14.000Z</updated>
+    </entry>
     <entry>
         <title type="html"><![CDATA[浅谈一下如何在Windows平台下使用VS Code编写、运行和调试C/C++程序]]></title>
         <id>https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/</id>

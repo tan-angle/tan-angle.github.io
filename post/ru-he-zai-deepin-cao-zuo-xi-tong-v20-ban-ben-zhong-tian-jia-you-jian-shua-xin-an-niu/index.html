@@ -16,7 +16,7 @@
 
   </head>
   <body>
-    <div class="main px-4 flex flex-col lg:flex-row">
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
       <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
   <div class="lg:sticky top-0">
     <div class="sidebar-content">
@@ -30,46 +30,22 @@
       
         <div class="animated fadeInLeft" style="animation-delay: 0.4s">
           <p class="my-4 text-gray-600 font-light hidden lg:block">
-            Hassan's blog
+            文章目录
           </p>
-          <div class="animated fadeInLeft social-container hidden lg:block" style="animation-delay: 0.6s">
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-github-line"></i>
-                </a>
-              
-            
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-weibo-line"></i>
-                </a>
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-zhihu-line"></i>
-                </a>
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-            
-              
-                <a href="无" target="_blank" class="mr-4 text-xl text-gray-400 font-light hover:text-gray-900">
-                  <i class="ri-qq-line"></i>
-                </a>
-              
-            
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E4%B8%80%E9%94%AE%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85">一、一键自动安装</a></li>
+<li><a href="#%E4%BA%8C-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85">二、手动安装</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
           </div>
         </div>
       
@@ -109,94 +85,101 @@
 </div>
 <div class="mask" onclick="closeMenu()">
 </div>
-      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4">
-        <h2 class="latest-article text-lg text-gray-700 mb-8">
-          <i class="ri-article-line"></i>
-          最新文章
-        </h2>
-        
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${0 * 0.2}s` }">
-    
-      <a href="https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://tan-angle.github.io/post-images/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu.webp'">
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">如何在Deepin操作系统V20版本中添加右键刷新按钮</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-06-04 / 2 min read
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">如何在Deepin操作系统V20版本中添加右键刷新按钮</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-06-04 / 2 min read</div>
-    </div>
-  </section>
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://tan-angle.github.io/post-images/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu.webp" alt="">
+        
+        <div class="post-content yue">
+          <h3 id="一-一键自动安装">一、一键自动安装</h3>
+<p>首先，需要在终端中安装wget：</p>
+<pre><code>sudo apt install wget
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
+<p>其次，再输入以下命令进行安装，安装过程中终端会提示：请选择使用F5刷新还是Fn+F5刷新。我一般选择F5。</p>
+<pre><code>sh -c &quot;$(wget https://gitee.com/lyvnee/deepin-refresh/raw/master/install.sh -O -)&quot;
+</code></pre>
+<figure data-type="image" tabindex="2"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
+<h3 id="二-手动安装">二、手动安装</h3>
+<p>1.安装依赖</p>
+<p>打开深度终端输入下面命令，安装Deepin文件管理上下文菜单 OEM 支持插件和键盘模拟软件<code>xautomation</code>。</p>
+<pre><code>sudo apt install dde-file-manager-menu-oem xautomation -y
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
+<p>2.创建desktop文件</p>
+<p>在<code>/usr/share/deepin/dde-file-manager/oem-menuextensions/</code>路径下创建<code>refresh.desktop</code>文件，具体操作如下。</p>
+<p>1）创建路径并新建<code>refresh.desktop</code>；</p>
+<pre><code>sudo mkdir -p /usr/share/deepin/dde-file-manager/oem-menuextensions/
+sudo dedit  /usr/share/deepin/dde-file-manager/oem-menuextensions/refresh.desktop
+</code></pre>
+<figure data-type="image" tabindex="4"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
+<p>2）填入以下内容后保存。</p>
+<pre><code>[Desktop Entry]
+Type=Application
+Name=refresh
+Name[zh_CN]=刷新
+Icon=view-refresh
+Exec=xte &quot;key F5&quot;
+#Exec=xte &quot;keydown Multi_key&quot; &quot;key F5&quot; &quot;keyup Multi_key&quot;
+X-DFM-MenuTypes=EmptyArea
+</code></pre>
+<figure data-type="image" tabindex="5"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
+<p>注意：请根据不同硬件条件需求来选择使用F5或Fn+F5进行刷新，然后调整上面<code>#</code>的位置。</p>
+<p>所有步骤完成之后，需要退出文件管理器，然后重新打开。</p>
+<p>右键刷新按钮效果图如下所示：</p>
+<p><img src="https://img-blog.csdnimg.cn/20210527225650668.png" alt="img" loading="lazy"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></p>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${1 * 0.2}s` }">
-    
-      <a href="https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://tan-angle.github.io/post-images/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu.webp'">
         </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">浅谈一下如何在Windows平台下使用VS Code编写、运行和调试C/C++程序</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-06-04 / 8 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${2 * 0.2}s` }">
-    
-      <a href="https://tan-angle.github.io/post/ru-he-zai-linuxyi-ddeepin-cao-zuo-xi-tong-wei-li-ping-tai-xia-shi-yong-visual-stdio-code-yun-xing-cccheng-xu/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://tan-angle.github.io/post-images/ru-he-zai-linuxyi-ddeepin-cao-zuo-xi-tong-wei-li-ping-tai-xia-shi-yong-visual-stdio-code-yun-xing-cccheng-xu.webp'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://tan-angle.github.io/post/ru-he-zai-linuxyi-ddeepin-cao-zuo-xi-tong-wei-li-ping-tai-xia-shi-yong-visual-stdio-code-yun-xing-cccheng-xu/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0"> 如何在Linux（以Ddeepin操作系统为例）平台下使用visual stdio code运行C/C++程序</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
         
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-06-04 / 6 min read</div>
-    </div>
-  </section>
 
-  <section class="post-item md:flex pb-12 animated fadeIn" :style="{ 'animation-delay': `${3 * 0.2}s` }">
-    
-      <a href="https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/" class="feature-image-wrapper bg-gray-100 rounded-lg flex-shrink-0 mr-8 w-full h-56 h-32 md:w-56 md:h-40">
-        <div class="post-feature-image lazy w-full h-56 h-32 md:w-56 md:h-40" data-bg="'https://tan-angle.github.io/post-images/sublime-text-an-zhuang-yu-han-hua-jiao-cheng.jpg'">
-        </div>
-      </a>
-    
-    <div class="content">
-      <a href="https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/">
-        <h2 class="post-title text-xl font-extrabold mt-5 md:mt-0">Sublime Text安装与汉化教程</h2>
-      </a>
-      <div class="post-abstract text-gray-700 font-light my-4">
-        
-      </div>
-      <div class="text-gray-400 text-sm font-light">2021-06-04 / 2 min read</div>
-    </div>
-  </section>
 
-        <div class="read-more">
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/">
+                <h3 class="post-title">
+                  浅谈一下如何在Windows平台下使用VS Code编写、运行和调试C/C++程序
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
           
         </div>
-        <div class="index-page">
-          <div class="pagination-container animated fadeIn">
-  
-  
-</div>
 
-        </div>
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c499977fc3799c1f2ac6',
+    clientSecret: '552d00692e88353b372b653addb269aefc59aa2c',
+    repo: 'tan-angle.github.io',
+    owner: 'tan-angle',
+    admin: ['tan-angle'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
       </div>
     </div>
 
