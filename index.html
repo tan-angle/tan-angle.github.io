@@ -5,12 +5,12 @@
   <meta charset="UTF-8" />
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<meta name="keywords" content="Gridea静态个人博客">
+<meta name="keywords" content="">
 <meta name="description" content="Hassan&#39;s blog">
 <meta name="theme-color" content="#000">
 <title>Hassan</title>
-<link rel="shortcut icon" href="/favicon.ico?v=1622801836669">
-<link rel="stylesheet" href="/media/css/pisces.css">
+<link rel="shortcut icon" href="/favicon.ico?v=1622803314166">
+<link rel="stylesheet" href="/media/css/gemini.css">
 <link rel="stylesheet" href="/media/fonts/font-awesome.css">
 <link
   href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Rosario:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext"
@@ -47,7 +47,7 @@
   <div class="head-top-line"></div>
   <div class="header-box">
     
-<div class="pisces">
+<div class="gemini">
   <header class="header  ">
     <div class="blog-header box-shadow-wrapper bg-color " id="header">
       <div class="nav-toggle" id="nav_toggle">
@@ -160,7 +160,7 @@
   <div class="main-continer">
     
     <div
-      class="section-layout pisces ">
+      class="section-layout gemini ">
       <div class="section-layout-wrapper">
         <div id="sidebarMeta" class="sidebar">
     
@@ -168,6 +168,12 @@
   <div class="sidebar-item">
     <img class="site-author-image right-motion" src="/images/avatar.png"/>
     <p class="site-author-name">Hassan</p>
+    
+    <div class="site-description right-motion">
+      
+        <p id="binft">爱学习的好孩子！</p>
+      
+    </div>
     
   </div>
   <div class="sidebar-item side-item-stat right-motion">
@@ -195,6 +201,20 @@
     
   
   
+    <div class="sidebar-item sidebar-item-social">
+      <div class="social-item">
+        
+        
+          
+            <a class="social-img" href="#">
+              <img src="\media\images\custom-array-imgSocials-1622803313717-socialImg.png" />
+              <i class="fa fa-wechat" title="微信" ></i>
+            </a>
+          
+        
+      </div>
+    </div>
+  
 
 
 
@@ -207,7 +227,7 @@
 </div>
 <script>
   let sidebarMeta = document.querySelector('#sidebarMeta');
-  let scheme = 'pisces';
+  let scheme = 'gemini';
   let sidebarWrapper = document.querySelector('.sidebar-wrapper');
   if (sidebarMeta && (scheme === 'pisces' || scheme === 'gemini')) {
     document.addEventListener('scroll', function(e) {
@@ -219,8 +239,8 @@
     });
   }
   </script>
-        <div class="section-box pisces">
-          <section class="section bg-color posts-expand slide-down-in">
+        <div class="section-box gemini">
+          <section class="section  posts-expand slide-down-in">
             
   <article class="post-list-box  post box-shadow-wrapper">
     <div class="article-wrapper bg-color">
@@ -288,10 +308,6 @@
         </div>
         
       </div>
-      
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
       
     </div>
   </article>
@@ -363,10 +379,6 @@
         
       </div>
       
-        <footer class="post-footer">
-          <div class="post-eof"></div>
-        </footer>
-      
     </div>
   </article>
   
@@ -408,7 +420,7 @@
   </footer>
   
   
-  <div class="pisces back-to-top" id="back_to_top">
+  <div class="gemini back-to-top" id="back_to_top">
     <i class="fa fa-arrow-up"></i>
     
     <span class="scrollpercent">
@@ -1105,7 +1117,7 @@
   hljs.initHighlightingOnLoad();
   
   // 离开当前页title变化
-  var leaveTitle = "";
+  var leaveTitle = "See you next time!";
   if (leaveTitle) {
     document.addEventListener('visibilitychange', function () {
       if (document.visibilityState == 'hidden') {
@@ -1506,15 +1518,7 @@ E-mail  :tanshijin-personal@hotmail.com!&lt;/p&gt;
 
 
   <div class="snow-container"></div>
-  <script src="/media/js/bg/canvas-nest.js"></script>
-  <script>
-  const config = {
-    color: '255,0,0',
-    count: 88,
-  };
-  // Using config rendering effect at 'element'.
-  const cn = new CanvasNest(document.querySelector('.snow-container'), config);
-  </script>
+  <script src="/media/js/bg/snow.js"></script>
 
 
 </html>
