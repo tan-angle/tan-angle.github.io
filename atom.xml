@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tan-angle.github.io</id>
     <title>Hassan&apos;s blog</title>
-    <updated>2021-06-04T10:47:56.329Z</updated>
+    <updated>2021-06-04T10:49:17.090Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tan-angle.github.io"/>
     <link rel="self" href="https://tan-angle.github.io/atom.xml"/>
@@ -16,14 +16,6 @@
         <link href="https://tan-angle.github.io/post/guan-yu-ben-zhan/">
         </link>
         <updated>2021-06-04T08:54:12.000Z</updated>
-        <content type="html"><![CDATA[<p>《欢迎来到我的个人博客，很高兴可以在这里与你一起分享！🤝》</p>
-<h2 id="博主是谁">👨‍💻 博主是谁🎓</h2>
-<p>Of course it's me! My name is Tan Shijin.</p>
-<h2 id="联系我呀">📬 联系我呀👇</h2>
-<p>Q       Q:2812153702<br>
-Wechat:jin2503307964<br>
-E-mail  :tanshijin-personal@hotmail.com!</p>
-]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Sublime Text安装与汉化教程]]></title>
@@ -31,39 +23,5 @@ E-mail  :tanshijin-personal@hotmail.com!</p>
         <link href="https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/">
         </link>
         <updated>2021-06-04T06:07:57.000Z</updated>
-        <content type="html"><![CDATA[<h5 id="1-官网下载">1、官网下载</h5>
-<p>      <a href="https://www.sublimetext.com/">https://www.sublimetext.com/</a></p>
-<h5 id="2-安装">2、安装</h5>
-<p>      安装过程需要注意一下安装目录，默认是C盘，你可以更换一下安装目录，比如D、E、F盘等等（<mark>推荐</mark>）。当然如果你也可以不换，毕竟它的安装包还是比较小的。<br>
-<img src="https://img-blog.csdnimg.cn/20210602173238871.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
-<img src="https://img-blog.csdnimg.cn/20210602173254925.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
-安装成功后可以在电脑的开始菜单中打开。<br>
-<img src="https://img-blog.csdnimg.cn/20210602173303420.png" alt="在这里插入图片描述" loading="lazy"></p>
-<h5 id="3-配置国内插件源">3、配置国内插件源</h5>
-<p>      按“Ctrl+Shift+P”打开控制台，输入“pcac”后回车，之后会在当前页面出现一个搜索框，然后粘贴下面这个网址：http://packagecontrol.cn/channel_v3.json，最后按回车即可！<br>
-<img src="https://img-blog.csdnimg.cn/20210602173314890.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
-<img src="https://img-blog.csdnimg.cn/20210602173319238.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<h5 id="4-安装package-control">4、安装Package Control</h5>
-<p>很多人都是在这一步出了问题。<br>
-图片步骤：<br>
-①	按“Ctrl+Shift+P”打开控制台，输入“install”，在出现的下栏菜单选项中鼠标左键单击“Install Package Control”进行安装。<br>
-<img src="https://img-blog.csdnimg.cn/20210602173334515.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<p>②鼠标左键点击“install package control”后可能会弹出这个页面，此时把它关闭，然后再把sublime text关掉再重新打开，最后按照同样的方法按“Ctrl+Shift+P”打开控制台，输入“install”，单击“Package Control”进行安装即可。<br>
-<img src="https://img-blog.csdnimg.cn/20210602173341314.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<p>③	点击“package control：install package”后，在当前页面最左下角会有一个“Loading”的一个滚动条（意思是正在加载中），等待一分钟左右即可！如果超过了一分钟还没有出现，把它关闭再重新打开即可！<br>
-<img src="https://img-blog.csdnimg.cn/20210602173348346.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<p>④经过耐心等待后，会弹出一个搜索框：这就代表你已经成功安装了“package control：install package”。<br>
-<img src="https://img-blog.csdnimg.cn/20210602173354697.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<h5 id="5-安装中文语言包">5、安装中文语言包</h5>
-<p>      在弹出的搜索框中输入&quot;Chinese”，点击下拉菜单栏中的“ChineseLocalizations&quot;即可！<br>
-<img src="https://img-blog.csdnimg.cn/20210602173401376.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
-      之后，同样会在当面页面的左下角中加载安装包！<br>
-<img src="https://img-blog.csdnimg.cn/2021060217340796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
-<h5 id="6-出现一下页面即为安装成功">6、出现一下页面即为安装成功！</h5>
-<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210602174247219.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="" loading="lazy"></figure>
-<p>      剩下的内容自己探索吧！比如安装各种你所需要的插件（c语言、python等，还有代码自动补齐插件、主题美化等等）不懂的自己再查阅资料吧！<br>
-7、题外知识<br>
-      安装python代码自动补全：按住Ctrl+Shift+P，输入install，安装install package，等待出现搜索框，最后输入Anaconda回车即</p>
-]]></content>
     </entry>
 </feed>
