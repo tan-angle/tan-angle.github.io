@@ -38,8 +38,15 @@
 <ul>
 <li>
 <ul>
-<li><a href="#%E4%B8%80-%E4%B8%80%E9%94%AE%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85">一、一键自动安装</a></li>
-<li><a href="#%E4%BA%8C-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85">二、手动安装</a></li>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E9%A2%98%E7%9B%AE%E6%8F%8F%E8%BF%B0">题目描述：</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -86,51 +93,175 @@
 <div class="mask" onclick="closeMenu()">
 </div>
       <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
-        <h1 class="text-3xl font-bold lg:mt-16">如何在Deepin操作系统V20版本中添加右键刷新按钮</h1>
+        <h1 class="text-3xl font-bold lg:mt-16">Java：模拟一个简单的银行ATM机功能</h1>
         <div class="text-sm text-gray-700 lg:my-8">
-          2021-06-04 / 2 min read
+          2021-06-04 / 4 min read
         </div>
         
-          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://tan-angle.github.io/post-images/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu.webp" alt="">
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://tan-angle.github.io/post-images/javamo-ni-yi-ge-jian-dan-de-yin-xing-atm-ji-gong-neng.webp" alt="">
         
         <div class="post-content yue">
-          <h3 id="一-一键自动安装">一、一键自动安装</h3>
-<p>首先，需要在终端中安装wget：</p>
-<pre><code>sudo apt install wget
+          <h5 id="题目描述">题目描述：</h5>
+<p>（1）输入用户卡号和密码并验证登录是否成功<br>
+（2）如果登录成功则，输出成功提示<br>
+（3）输出主菜单，如下所示</p>
+<blockquote>
+<p>请您选择业务<br>
+1.查询：输出账号余额信息</p>
+<pre><code>  	2. 存款：输入存款金额并存款
+    	3. 取款：输入取款金额并取款
+        4. 退出：输出欢迎下次再次光临某某银行信息，否则输出登录失败并输出错误信息
 </code></pre>
-<figure data-type="image" tabindex="1"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
-<p>其次，再输入以下命令进行安装，安装过程中终端会提示：请选择使用F5刷新还是Fn+F5刷新。我一般选择F5。</p>
-<pre><code>sh -c &quot;$(wget https://gitee.com/lyvnee/deepin-refresh/raw/master/install.sh -O -)&quot;
+</blockquote>
+<p><em><strong>以下银行数据库默认只有一个用户，博友可根据实际情况需要进行修改，特意在此提示。</strong></em></p>
+<p><mark>具体代码实现如下：</mark></p>
+<pre><code class="language-java">package HomeWork;
+import java.util.Scanner;
+public class BankATM {
+	public static void main(String[] args) 
+	{
+		Scanner sc =new Scanner(System.in);
+		Bank.bankName=&quot;中国银行（Chian Bank）&quot;;
+		Bank.welcome();
+		Bank bank =new Bank();
+		int error=3;
+		while(true)
+		{
+			System.out.println(&quot;请输入账号：&quot;);
+			String id=sc.nextLine();
+			System.out.println(&quot;正在读卡，请稍后...&quot;);
+			System.out.println(&quot;请输入密码：&quot;);
+			String password=sc.nextLine();
+			boolean judge=bank.judge(id, password);
+			if(judge)
+			{
+				System.out.println(&quot;--------登录成功!--------&quot;);
+				break;
+			}
+			else 
+			{
+				if(error==1)
+				{
+					System.exit(0);
+				}
+				error=error-1;
+				System.out.println(&quot;--------密码错误,还剩余&quot;+error+&quot;次!--------&quot;);
+			}
+		}
+		while(true)
+		{
+			System.out.println(&quot;--------请您选择需要查询的业务--------&quot;);
+			System.out.println(&quot;【1】查询                   【2】取款&quot;);
+			System.out.println(&quot;【3】存款                   【4】退卡&quot;);
+			int select=sc.nextInt();
+			int Chishu=0;
+			switch (select) 
+			{
+			case 1:
+				bank.chaxun();
+				break;
+			case 2:
+				System.out.println(&quot;请输入取款金额:&quot;);
+				while(true)
+				{
+					int Qu_Qian=sc.nextInt();
+					if(Qu_Qian&gt;0&amp;&amp;Qu_Qian%100==0)
+					{
+						bank.qukuan(Qu_Qian);
+						break;
+					}
+					else 
+					{
+						System.out.println(&quot;取款金额必须为100的整数,请重新输入&quot;);
+					}
+				}
+				break;
+			case 3:
+				System.out.println(&quot;请输入存款金额:&quot;);
+				while(true)
+				{
+					int Cun_Qian=sc.nextInt();
+					if(Cun_Qian&gt;0&amp;&amp;Cun_Qian%100==0)
+					{
+						bank.cunkuan(Cun_Qian);
+						break;
+					}
+					else 
+					{
+						System.out.println(&quot;取款金额必须为100的整数,请重新输入&quot;);
+					}
+				}
+				break;
+			case 4:
+				Bank.exit();
+				Chishu=4;
+				break;
+			default:
+				break;
+			}
+			if(Chishu==4)
+			{
+				break;
+			}
+		}
+	}
+}
+class Bank {
+	static String bankName;
+	private String name=&quot;建国&quot;;//账户名字，此选项可根据需要修改
+	private String id=&quot;100000010&quot;;
+	private String password=&quot;110110&quot;;
+	private double count;//余额
+	private double chage;//交易额
+	static void welcome()
+	{
+		System.out.println(&quot;--------欢迎来到&quot;+bankName+&quot;--------&quot;);
+	}
+	//查询
+	public void chaxun()
+	{
+		System.out.println(&quot;您当前账户可用余额:&quot;+this.count);
+	}
+	//存款
+	public void cunkuan(double chage)
+	{
+		count=count+chage;
+		System.out.println(name+&quot;您好，您的账户已存入&quot;+chage+&quot;元,&quot;+&quot;当前余额&quot;+count+&quot;元&quot;);
+	}
+	//取款
+	public void qukuan(double chage) 
+	{
+		if(count-chage&gt;0)
+		{
+			count=count-chage;
+			System.out.println(name+&quot;您好，您的账户已取出&quot;+chage+&quot;元,&quot;+&quot;当前余额&quot;+count+&quot;元&quot;);
+		}
+		else
+		{
+			System.out.println(&quot;对不起，您的余额不足!&quot;);
+		}
+	}
+	public boolean judge(String id,String password)/*判断密码是否正确*/
+	{
+		boolean flog=(this.id.equals(id)&amp;&amp;this.password.equals(password))?true:false;
+		if (!flog) {
+			System.out.println(&quot;您输入的账号/密码错误!&quot;);
+		}
+		return flog;
+	}
+	//退出
+	static void exit()
+	{
+		System.out.println(&quot;正在退卡...&quot;);
+		System.out.println(&quot;--------退卡成功,请携带好随身物品，欢迎再次光临!--------&quot;);
+	}
+}
+
 </code></pre>
-<figure data-type="image" tabindex="2"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
-<h3 id="二-手动安装">二、手动安装</h3>
-<p>1.安装依赖</p>
-<p>打开深度终端输入下面命令，安装Deepin文件管理上下文菜单 OEM 支持插件和键盘模拟软件<code>xautomation</code>。</p>
-<pre><code>sudo apt install dde-file-manager-menu-oem xautomation -y
-</code></pre>
-<figure data-type="image" tabindex="3"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
-<p>2.创建desktop文件</p>
-<p>在<code>/usr/share/deepin/dde-file-manager/oem-menuextensions/</code>路径下创建<code>refresh.desktop</code>文件，具体操作如下。</p>
-<p>1）创建路径并新建<code>refresh.desktop</code>；</p>
-<pre><code>sudo mkdir -p /usr/share/deepin/dde-file-manager/oem-menuextensions/
-sudo dedit  /usr/share/deepin/dde-file-manager/oem-menuextensions/refresh.desktop
-</code></pre>
-<figure data-type="image" tabindex="4"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
-<p>2）填入以下内容后保存。</p>
-<pre><code>[Desktop Entry]
-Type=Application
-Name=refresh
-Name[zh_CN]=刷新
-Icon=view-refresh
-Exec=xte &quot;key F5&quot;
-#Exec=xte &quot;keydown Multi_key&quot; &quot;key F5&quot; &quot;keyup Multi_key&quot;
-X-DFM-MenuTypes=EmptyArea
-</code></pre>
-<figure data-type="image" tabindex="5"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></figure>
-<p>注意：请根据不同硬件条件需求来选择使用F5或Fn+F5进行刷新，然后调整上面<code>#</code>的位置。</p>
-<p>所有步骤完成之后，需要退出文件管理器，然后重新打开。</p>
-<p>右键刷新按钮效果图如下所示：</p>
-<p><img src="https://img-blog.csdnimg.cn/20210527225650668.png" alt="img" loading="lazy"><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动" loading="lazy"></p>
+<p><mark>运行结果如下：</mark><br>
+<img src="https://img-blog.csdnimg.cn/20191122215604271.PNG" alt="在这里插入图片描述" loading="lazy"><br>
+<img src="https://img-blog.csdnimg.cn/20191122215638681.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
+<img src="https://img-blog.csdnimg.cn/20191122215659190.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></p>
 
         </div>
 
@@ -139,21 +270,12 @@ X-DFM-MenuTypes=EmptyArea
 
         <div class="flex justify-between py-8">
           
-            <div class="prev-post">
-              <a href="https://tan-angle.github.io/post/javamo-ni-yi-ge-jian-dan-de-yin-xing-atm-ji-gong-neng/">
-                <h3 class="post-title">
-                  <i class="ri-arrow-left-line"></i>
-                  Java：模拟一个简单的银行ATM机功能
-                </h3>
-              </a>
-            </div>
-          
 
           
             <div class="next-post">
-              <a href="https://tan-angle.github.io/post/qian-tan-yi-xia-ru-he-zai-windows-ping-tai-xia-shi-yong-vs-code-bian-xie-yun-xing-he-diao-shi-cccheng-xu/">
+              <a href="https://tan-angle.github.io/post/ru-he-zai-deepin-cao-zuo-xi-tong-v20-ban-ben-zhong-tian-jia-you-jian-shua-xin-an-niu/">
                 <h3 class="post-title">
-                  浅谈一下如何在Windows平台下使用VS Code编写、运行和调试C/C++程序
+                  如何在Deepin操作系统V20版本中添加右键刷新按钮
                   <i class="ri-arrow-right-line"></i>
                 </h3>
               </a>
