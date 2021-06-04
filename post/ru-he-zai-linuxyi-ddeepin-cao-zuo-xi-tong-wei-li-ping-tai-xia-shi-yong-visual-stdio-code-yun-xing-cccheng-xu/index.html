@@ -1,0 +1,383 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Hassan&#39;s blog</title>
+<meta name="description" content="Hassan's blog" />
+<link rel="shortcut icon" href="https://tan-angle.github.io/favicon.ico?v=1622806335341">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://tan-angle.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://tan-angle.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://tan-angle.github.io/images/avatar.png?v=1622806335341" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Hassan&#39;s blog</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E4%B8%80-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87">一、前期准备</a></li>
+<li><a href="#%E4%BA%8C-%E6%89%93%E5%BC%80visual-stdio-code%E5%AE%89%E8%A3%85%E7%9B%B8%E5%85%B3%E6%8F%92%E4%BB%B6">二、打开visual stdio code，安装相关插件</a></li>
+<li><a href="#%E4%B8%89-%E7%BC%96%E8%AF%91-%E8%BF%90%E8%A1%8C%E7%A8%8B%E5%BA%8F">三、编译、运行程序</a></li>
+</ul>
+</li>
+<li><a href="#%E5%9B%9B-%E8%B0%83%E8%AF%95%E7%A8%8B%E5%BA%8F">四、调试程序</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://tan-angle.github.io/archives" class="menu" style="animation-delay: 0.2s">
+          文章
+        </a>
+      
+    
+      
+        <a href="https://tan-angle.github.io/post/guan-yu-ben-zhan" class="menu" style="animation-delay: 0.4s">
+          联系作者
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700"><div style="background:white;margin: 0 auto;  text-align: center;color: black; font-size: 10px;clear: both;">
+地址:广西壮族自治区贵港市港北区中山路110号 &nbsp; 邮编:537100 &nbsp; 电话:0775-4339558 &nbsp;桂ICP备0775110号-1&nbsp; 桂公网安备4525020201号&nbsp;版权所有©2021 tan-angle&nbsp; 技术支持:<span style="color: rgb(227,108,9); text-decoration: none"><a href="https://tan-angle.github.io"style="color: #e36c09">Hassan工作室</a>
+</div></div>
+    <a class="rss" href="https://tan-angle.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16"> 如何在Linux（以Ddeepin操作系统为例）平台下使用visual stdio code运行C/C++程序</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-06-04 / 6 min read
+        </div>
+        
+          <img class="post-feature-image rounded-lg mx-auto my-4" src="https://tan-angle.github.io/post-images/ru-he-zai-linuxyi-ddeepin-cao-zuo-xi-tong-wei-li-ping-tai-xia-shi-yong-visual-stdio-code-yun-xing-cccheng-xu.webp" alt="">
+        
+        <div class="post-content yue">
+          <h3 id="一-前期准备">一、前期准备</h3>
+<ol>
+<li>
+<p>首先，你需要在<a href="https://code.visualstudio.com/">visual stdio code官网</a>或者deepin应用商店下载并安装好visual stdio code。</p>
+</li>
+<li>
+<p>其次，你需要在Linux终端中安装gcc、g++和gdb。因为vscode只是一个集成开发工具（IDE），并没有自带有C/C++的编译器，因此我们需要去安装一个C/C++编译器。它不需要像在Windows操作系统下先安装MinGw-w64，然后找到MinGw-w64的Bin目录，然最后配置环境变量。</p>
+</li>
+<li>
+<p>打开终端依次输入下面的命令，确保安装好gcc、g++和gdb。这里的四个过程我就不一一截图啦！根据系统提示操作即可，不会有啥大问题。</p>
+</li>
+</ol>
+<p>①更新软件包</p>
+<pre><code class="language-bash">sudo apt-get update
+[根据系统要求如果需要输入密码则输入密码]
+[如果在安装过程中有提示需要输入Y(Yes)/N(No)，没有什么特殊要求一般输入Y]
+</code></pre>
+<figure data-type="image" tabindex="1"><img src="https://img-blog.csdnimg.cn/20210527215816432.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"></figure>
+<p>②安装gcc</p>
+<pre><code class="language-bash">sudo apt-get install gcc
+[根据系统要求如果需要输入密码则输入密码]
+[如果在安装过程中有提示需要输入Y(Yes)/N(No)，没有什么特殊要求一般输入Y]
+</code></pre>
+<p>③安装g++</p>
+<pre><code class="language-bash">sudo apt-get install g++
+[根据系统要求如果需要输入密码则输入密码]
+[如果在安装过程中有提示需要输入Y(Yes)/N(No)，没有什么特殊要求一般输入Y]
+</code></pre>
+<p>④安装gdb</p>
+<pre><code class="language-bash">sudo apt-get install gdb
+[根据系统要求如果需要输入密码则输入密码]
+[如果在安装过程中有提示需要输入Y(Yes)/N(No)，没有什么特殊要求一般输入Y]
+</code></pre>
+<h3 id="二-打开visual-stdio-code安装相关插件">二、打开visual stdio code，安装相关插件</h3>
+<p><img src="https://img-blog.csdnimg.cn/20210527220339978.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0tpbmdfOTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" loading="lazy"><br>
+安装好visual stdio code后，需要安装一下三个插件：</p>
+<ol>
+<li>Chinese (Simplified) Language Pack for Visual Studio Code（中文语言包），因为刚开始第一次安装好visual stdio code默认显示的是英文，所以需要它设置为咱们Chinese people看得懂的字！！！</li>
+<li>C/C++</li>
+<li>Code Runner<br>
+这里就不过多赘述，如果这一步看不懂的可以看看我之前写的一篇“浅谈一下如何在Windows平台下使用VS Code（全称visual studio code）编写、运行和调试C/C++程序”文章，里面已经讲得非常详细啦！！！</li>
+</ol>
+<h3 id="三-编译-运行程序">三、编译、运行程序</h3>
+<p>首先，你需要新建一个C/C++的项目，其次新建好一个C/C++文件，最后在C/C++文件的代码编辑区编写一个超级简单的程序（<strong>Hello World！</strong>），实在是懒得敲的，我也给你准备好啦。这一步也不会的同样看我这一篇文章。</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(){
+   int a=1,b=2;
+   printf(&quot;a+b= %d&quot;,a+b);
+   return 0;
+}
+</code></pre>
+<p><mark><strong>写完程序记得保存哦！</strong></mark></p>
+<p>1.点击代码编辑区右上角的三角形按钮(原本这个位置没有，是安装Code Runner插件后新增的一键编译运行程序的按钮)，或者按Ctrl+Alt+N就能编译运行当前程序。</p>
+<p>2.在终端你应该会看到这样的结果。<br>
+<img src="https://img-blog.csdnimg.cn/20210527224115723.png" alt="在这里插入图片描述" loading="lazy"></p>
+<h2 id="四-调试程序">四、调试程序</h2>
+<p>首先，你应该也必须养成的一个习惯就是在电脑上桌面或者其他地方的位置新建一个项目（文件夹），用于存放项目编写的代码。<br>
+<mark>注意：配置好的调试环境仅会对存放在这一个文件夹以及这个文件夹子目录里的程序生效！</mark><br>
+①  在VS code里面点击：文件&gt;打开文件夹，打开刚刚新建的项目（文件夹）</p>
+<p>② 再在刚才的项目下新建一个 .test文件夹(注意前面的&quot;.&quot;号)<br>
+然后在.test文件夹下新建两个json文件分别叫做:launch.json和 tasks.json，然后分别复制下面这两个文件到相应的位置。</p>
+<ul>
+<li>launch.json</li>
+</ul>
+<pre><code class="language-c">{
+    &quot;version&quot;: &quot;0.2.0&quot;,
+    &quot;configurations&quot;: [
+        {
+            &quot;name&quot;: &quot;C/C++&quot;,
+            &quot;type&quot;: &quot;cppdbg&quot;,
+            &quot;request&quot;: &quot;launch&quot;,
+            &quot;program&quot;: &quot;${fileDirname}/${fileBasenameNoExtension}&quot;,
+            &quot;args&quot;: [],
+            &quot;stopAtEntry&quot;: false,
+            &quot;cwd&quot;: &quot;${workspaceFolder}&quot;,
+            &quot;environment&quot;: [],
+            &quot;externalConsole&quot;: false,
+            &quot;MIMode&quot;: &quot;gdb&quot;,
+            &quot;preLaunchTask&quot;: &quot;compile&quot;,
+            &quot;setupCommands&quot;: [
+                {
+                    &quot;description&quot;: &quot;Enable pretty-printing for gdb&quot;,
+                    &quot;text&quot;: &quot;-enable-pretty-printing&quot;,
+                    &quot;ignoreFailures&quot;: true
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+<ul>
+<li>tasks.json<br>
+如果是c语言就需要将下面的command项由g++改为gcc</li>
+</ul>
+<pre><code class="language-c">{
+    &quot;version&quot;: &quot;2.0.0&quot;,
+    &quot;tasks&quot;: [{
+            &quot;label&quot;: &quot;compile&quot;,
+            &quot;command&quot;: &quot;g++&quot;,
+            &quot;args&quot;: [
+                &quot;-g&quot;,
+                &quot;${file}&quot;,
+                &quot;-o&quot;,
+                &quot;${fileDirname}/${fileBasenameNoExtension}&quot;
+            ],
+            &quot;problemMatcher&quot;: {
+                &quot;owner&quot;: &quot;cpp&quot;,
+                &quot;fileLocation&quot;: [
+                    &quot;relative&quot;,
+                    &quot;${workspaceRoot}&quot;
+                ],
+                &quot;pattern&quot;: {
+                    &quot;regexp&quot;: &quot;^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$&quot;,
+                    &quot;file&quot;: 1,
+                    &quot;line&quot;: 2,
+                    &quot;column&quot;: 3,
+                    &quot;severity&quot;: 4,
+                    &quot;message&quot;: 5
+                }
+            },
+            &quot;group&quot;: {
+                &quot;kind&quot;: &quot;build&quot;,
+                &quot;isDefault&quot;: true
+            }
+        }
+    ]
+}
+</code></pre>
+<p>好了，到这里就已经可以正常调试啦！此时也可以按 Ctrl+Shift+B 直接调用配置好的g++ task 编译程序而不运行程序。</p>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://tan-angle.github.io/tag/LjJ0pCVnN/">
+            <span class="flex-auto">Deepin</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/">
+                <h3 class="post-title">
+                  Sublime Text安装与汉化教程
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'c499977fc3799c1f2ac6',
+    clientSecret: '552d00692e88353b372b653addb269aefc59aa2c',
+    repo: 'tan-angle.github.io',
+    owner: 'tan-angle',
+    admin: ['tan-angle'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+      </div>
+    </div>
+
+    <script src="https://tan-angle.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>
