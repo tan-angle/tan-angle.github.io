@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://tan-angle.github.io</id>
     <title>Hassan</title>
-    <updated>2021-06-04T08:26:05.488Z</updated>
+    <updated>2021-06-04T08:59:55.028Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://tan-angle.github.io"/>
     <link rel="self" href="https://tan-angle.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://tan-angle.github.io/images/avatar.png</logo>
     <icon>https://tan-angle.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Hassan</rights>
+    <entry>
+        <title type="html"><![CDATA[🏠 关于本站]]></title>
+        <id>https://tan-angle.github.io/post/guan-yu-ben-zhan/</id>
+        <link href="https://tan-angle.github.io/post/guan-yu-ben-zhan/">
+        </link>
+        <updated>2021-06-04T08:54:12.000Z</updated>
+        <content type="html"><![CDATA[<p>《欢迎来到我的个人博客，很高兴可以在这里与你一起分享！🤝》</p>
+<h2 id="博主是谁">👨‍💻 博主是谁🎓</h2>
+<p>Of course it's me! My name is Tan Shijin.</p>
+<h2 id="联系我呀">📬 联系我呀👇</h2>
+<p>Q       Q:2812153702<br>
+Wechat:jin2503307964<br>
+E-mail  :tanshijin-personal@hotmail.com!</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Sublime Text安装与汉化教程]]></title>
         <id>https://tan-angle.github.io/post/sublime-text-an-zhuang-yu-han-hua-jiao-cheng/</id>
